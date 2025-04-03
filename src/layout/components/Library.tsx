@@ -40,7 +40,6 @@ const Library = () => {
     return <ErrorMessage errorMessage={error.message} />;
   }
 
-  console.log("playlist", data);
   return (
     <div>
       {!data || data?.pages[0].total === 0 ? (

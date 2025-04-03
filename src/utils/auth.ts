@@ -17,9 +17,6 @@ export const getSpotifyAuthUrl = async () => {
   // generated in the previous step
   window.localStorage.setItem("code_verifier", codeVerifier);
 
-  console.log("clientId:", clientId);
-  console.log("redirectUri:", redirectUri);
-
   if (clientId && redirectUri) {
     const params: AuthUrlParams = {
       response_type: "code",
@@ -31,6 +28,5 @@ export const getSpotifyAuthUrl = async () => {
     };
     authUrl.search = new URLSearchParams(Object.entries(params)).toString();
     window.location.href = authUrl.toString(); // spotify 로그인 주소를 연다
-    console.log("작동");
   }
 };

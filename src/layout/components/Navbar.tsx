@@ -40,7 +40,6 @@ const Navbar = () => {
     window.location.reload();
   };
   const { data: userProfile } = useGetCurrentUserProfile();
-  console.log("userProfile", userProfile);
   return (
     <Box display="flex" justifyContent="flex-end" alignItems="center" height="64px" paddingRight="20px">
       {userProfile ? (
